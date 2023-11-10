@@ -7,12 +7,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- favicon -->
     <!-- estilo  -->
+    <style>
+        .active {
+            color:blue;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <!-- header -->
-    <!-- nav -->
+    @include('layouts.partials.header')
+    
     @yield('content')
-    <!-- footer -->
+    
+    @include('layouts.partials.footer')
     <!-- script -->
 </body>
 </html>
