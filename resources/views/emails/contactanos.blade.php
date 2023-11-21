@@ -8,7 +8,10 @@
 </head>
 <body>
     <h1>Enviando un correo electronico</h1>
-    <p>Como prueba</p>
+    <p>Este es un correo de prueba ...</p>
+    <p><strong>Nombre :</strong> {{$data['name']}}</p>
+    <p><strong>Correo :</strong> {{$data['correo']}}</p>
+    <p><strong>Mensaje :</strong> {{$data['mensaje']}}</p>
     
 </body>
 </html>

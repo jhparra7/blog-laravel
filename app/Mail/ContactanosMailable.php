@@ -14,14 +14,16 @@ class ContactanosMailable extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $data;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
 
     /**
@@ -32,8 +34,8 @@ class ContactanosMailable extends Mailable
     public function envelope()
     {
         return new Envelope(
-            // from: new Address('parra.jesus@gmail.com', 'Jesus Parra'),
-            subject: 'Contactanos Mailable',
+            from: new Address('parra.jesus@gmail.com', 'Jesus Parra'),
+            subject: 'Informacion de Contacto',
         );
     }
 
